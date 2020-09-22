@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "puppeteer": "^5.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
@@ -17,7 +18,8 @@
     "test:watch": "react-scripts test --verbose --watchAll",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "eyes-storybook": "eyes-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@applitools/eyes-storybook": "^3.8.9",
     "@babel/core": "^7.11.6",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
