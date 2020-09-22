@@ -2,44 +2,22 @@ import React, { useState } from "react";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import { List } from "../components/List";
+import { deleteOne } from "../utils";
 
-const TodoListContainer = () => {
+export const TodoListContainer = () => {
   const [state, setState] = useState({ value: "", list: [] });
 
-  const renderList = () => {
-    return state.list.map((value, index) => {
-      return (
-        <li key={index} style={{ margin: "1em 0" }}>
-          {value}{" "}
-          <span
-            style={{ cursor: "pointer" }}
-            onClick={() => {
-              deleteList(index);
-            }}
-          >
-            X
-          </span>
-        </li>
-      );
-    });
-  };
-
-  const deleteList = key => {
-    const filtered = state.list.findIndex((value, index) => {
-      return index === key;
-    });
-    const newList = [...state.list];
-    newList.splice(filtered, 1);
+  const deleteTodoList = key => {
+    const res = deleteOne({ list: [...state.list], key });
     setState({
       ...state,
-      list: newList
+      list: res
     });
   };
 
   return (
     <div>
       <Input
-        data-testid="todoInput"
         value={state.value}
         onChange={e => {
           setState({
@@ -49,7 +27,6 @@ const TodoListContainer = () => {
         }}
       />
       <Button
-        data-testid="todoButton"
         primary
         size="large"
         label="Add"
@@ -64,10 +41,7 @@ const TodoListContainer = () => {
           });
         }}
       />
-      {/* <ul data-testid="todoList">{state.list.length ? renderList() : ""}</ul> */}
-      <List data={state.list} deleteList={deleteList} />
+      <List data={state.list} deleteTodoList={deleteTodoList} />
     </div>
   );
 };
-
-export default TodoListContainer;

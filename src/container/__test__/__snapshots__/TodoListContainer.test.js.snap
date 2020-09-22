@@ -28,42 +28,6 @@ exports[`TodoListContainer renders correctly 1`] = `
   >
     Add
   </button>
-  <ul
-    data-testid="todoList"
-  />
-</div>
-`;
-
-exports[`TodoListContainer should add todo in list 1`] = `
-<div>
-  <input
-    data-testid="todoInput"
-    onChange={[Function]}
-    placeholder="투두리스트 입력"
-    style={
-      Object {
-        "color": "black",
-      }
-    }
-    type="text"
-    value=""
-  />
-  <button
-    className="storybook-button storybook-button--large storybook-button--primary"
-    data-testid="todoButton"
-    onClick={[Function]}
-    style={
-      Object {
-        "backgroundColor": "purple",
-        "color": "white",
-      }
-    }
-    type="button"
-  >
-    Add
-  </button>
-  <ul
-    data-testid="todoList"
-  />
+  <ul />
 </div>
 `;

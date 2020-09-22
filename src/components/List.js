@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const List = ({ data, deleteList }) => {
+export const List = ({ data, deleteTodoList }) => {
   return (
-    <ul data-testid="todoList">
+    <ul>
       {data.map((value, index) => {
         return (
-          <li key={index} style={{ margin: "1em 0" }}>
+          <li data-testid="todoList" key={index} style={{ margin: "1em 0" }}>
             {value}
             <span
               style={{ cursor: "pointer" }}
               onClick={() => {
-                deleteList(index);
+                deleteTodoList(index);
               }}
             >
               X
@@ -25,5 +25,5 @@ export const List = ({ data, deleteList }) => {
 
 List.propTypes = {
   data: PropTypes.array.isRequired,
-  deleteList: PropTypes.func.isRequired
+  deleteTodoList: PropTypes.func.isRequired
 };

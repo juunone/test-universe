@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 export const Input = ({ placeholder, color, value, onChange, ...rest }) => {
   return (
     <input
+      data-testid="todoInput"
       type="text"
       placeholder={placeholder}
       style={color && { color }}

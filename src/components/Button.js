@@ -15,6 +15,7 @@ export const Button = ({
     : "storybook-button--secondary";
   return (
     <button
+      data-testid="todoButton"
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " "
