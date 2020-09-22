@@ -31,5 +31,6 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
+        token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
         name: wtf-test # optional
         fail_ci_if_error: true # optional (default = false)
