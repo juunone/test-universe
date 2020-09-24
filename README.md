@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/juunone/test-unviverse/branch/master/graph/badge.svg?token=TCAZRZR7A9)](https://codecov.io/gh/juunone/test-unviverse)
+[![codecov](https://codecov.io/gh/juunone/test-universe/branch/master/graph/badge.svg)](https://codecov.io/gh/juunone/test-universe)
 
 [![test-universe](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/5atziq/master&style=flat-square&logo=cypress)](https://dashboard.cypress.io/projects/5atziq/runs)
 
