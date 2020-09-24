@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 export const List = ({ data, deleteTodoList }) => {
   return (
-    <ul>
+    <ul data-testid="todoList">
       {data.map((value, index) => {
         return (
-          <li data-testid="todoList" key={index} style={{ margin: "1em 0" }}>
+          <li key={index} style={{ margin: "1em 0" }}>
             {value}
             <span
               style={{ cursor: "pointer" }}
