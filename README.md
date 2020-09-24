@@ -1,5 +1,7 @@
 [![codecov](https://codecov.io/gh/juunone/wtf-test/branch/master/graph/badge.svg?token=TCAZRZR7A9)](https://codecov.io/gh/juunone/wtf-test)
 
+[![test-universe](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/5atziq/master&style=flat-square&logo=cypress)](https://dashboard.cypress.io/projects/5atziq/runs)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
