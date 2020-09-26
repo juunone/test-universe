@@ -28,6 +28,8 @@ exports[`TodoListContainer renders correctly 1`] = `
   >
     Add
   </button>
-  <ul />
+  <ul
+    data-testid="todoList"
+  />
 </div>
 `;
