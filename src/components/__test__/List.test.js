@@ -6,7 +6,12 @@ import { List } from "../List";
 
 describe("List", () => {
   it("should render as long as the data", () => {
-    render(<List data={["첫번째", "두번째"]} deleteTodoList={deleteOne} />);
-    expect(screen.getByText(/첫번째/i)).toBeInTheDocument();
+    const mockData = ["첫번째", "두번째"];
+
+    render(<List data={mockData} deleteTodoList={deleteOne} />);
+
+    const li = document.querySelectorAll("li");
+
+    expect(li.length).toEqual(mockData.length);
   });
 });
